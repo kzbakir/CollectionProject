@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Rector extends Employee implements Sortable {
-    private static List<Employee> employees = new ArrayList<>();
+    private List<Employee> employees = new ArrayList<>();
 
-    static {
+    {
         employees.add(new Employee(2, "Armanov", "Ashat", VICE_RECTOR_POSITION));
         employees.add(new Employee(1, "Baigeldinov", "Daryn", DEAN_POSITION));
         employees.add(new Employee(4, "Darynov", "Erlan", HEAD_OF_DEPARTMENT_POSITION));

@@ -8,24 +8,27 @@ public class Employee {
     private String lastName;
     private String firstName;
     private String position;
+    public final static String RECTOR_POSITION = "Rector";
     public final static String VICE_RECTOR_POSITION = "Vice Rector";
     public final static String DEAN_POSITION = "Dean";
     public final static String HEAD_OF_DEPARTMENT_POSITION = "Head of department";
     public final static String TEACHER_POSITION = "Teacher";
     private static Map<String , Integer> positionPriority = new HashMap<>();
 
-    static {
-        positionPriority.put(VICE_RECTOR_POSITION, 4);
-        positionPriority.put(DEAN_POSITION, 3);
-        positionPriority.put(HEAD_OF_DEPARTMENT_POSITION, 2);
-        positionPriority.put(TEACHER_POSITION, 1);
-    }
+    public Employee(){};
 
     public Employee(int id, String lastName, String firstName, String position){
         this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;
         this.position = position;
+    }
+
+    static {
+        positionPriority.put(VICE_RECTOR_POSITION, 4);
+        positionPriority.put(DEAN_POSITION, 3);
+        positionPriority.put(HEAD_OF_DEPARTMENT_POSITION, 2);
+        positionPriority.put(TEACHER_POSITION, 1);
     }
 
     public void print(){
